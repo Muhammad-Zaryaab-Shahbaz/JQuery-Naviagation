@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    .abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        justify-content: center !important;
+    }
+}
+
+#tab >li {
+    float: none;
+    display: inline-block;
+    zoom: 1;
+}
+
+#tab {
+    text-align: center;
+    z-index: 2;
+}
+
+.rightSideBar {
+    justify-content: flex-end;
+    max-width: 240px;
+    position: fixed;
+    right: 0;
+    z-index: 5;
+}
+
+.sideBarBottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 1030;
+}
+
+.sideBarTop {
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+}

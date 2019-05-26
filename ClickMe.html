@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Wahid Technology</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation Bar-->
+  <nav class="navbar navbar-light bg-light navbar-expand-lg justify-content-center" id='mainNav' position="bottom">
+    <button class="navbar-toggler" type="button" id="toggleBtn" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" id="linksNav" push="center">
+        <li class="nav-item">
+          <a href="#" class="btn btn-warning btn-md"
+            onclick="navPush('linksNav','ml-auto w-100 justify-content-end','mr-auto w-100 justify-content-start','pushNavCenter')">
+            <i class="fa fa-angle-double-left fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li><a class="navbar-brand" href="#">Navbar</a></li>
+        <li class="nav-item">
+          <button class="btn btn-info" onclick="changePosition('mainNav','top');">Top</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-warning"
+            onclick="navPushCenter('pushNavCenter','mainNav','toggleBtn','navbarSupportedContent');">Center</button>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <div class="dropdown-divider"></div>
+            <li></li><a class="dropdown-item" href="#">Something else here</a>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-info" onclick="changePosition('mainNav','bottom');">Bottom</button>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="btn btn-warning btn-md"
+            onclick="navPush('linksNav','mr-auto w-100 justify-content-start','ml-auto w-100 justify-content-end','pushNavCenter')">
+            <i class="fa fa-angle-double-right fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Tabs -->
+  <ul class="nav nav-tabs abs" id="tab">
+    <li class="nav-item">
+      <a href="#" class="nav-link btn btn-warning btn-md"
+        onclick="tabPush('tab','justify-content-end','justify-content-start')">
+        <i class="fa fa-angle-double-left fa-lg" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Tabs</a>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link btn btn-info" onclick="changePosition('tab','top');">Top</button>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link btn btn-warning" onclick="changePosition('tab','center');">Center</button>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link btn btn-info" onclick="changePosition('tab','bottom');">Bottom</button>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link btn btn-warning btn-md"
+        onclick="tabPush('tab','justify-content-start','justify-content-end')">
+        <i class="fa fa-angle-double-right fa-lg" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+  <!-- Sidebar-->
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar" id="sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="#" class="nav-link btn btn-warning btn-sm" onclick="changeSideBarPosition('sidebar','top')">
+            <i class="fa fa-angle-double-up fa-1x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-file">
+              <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+              <polyline points="13 2 13 9 20 9"></polyline>
+            </svg>
+            Orders
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link btn btn-warning btn-sm" onclick="sideBarPush('sidebar','left')">
+            <i class="fa fa-angle-double-left fa-1x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-shopping-cart">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Products
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link btn btn-warning btn-sm" onclick="sideBarPush('sidebar','right')">
+            <i class="fa fa-angle-double-right fa-1x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-bar-chart-2">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            Reports
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link btn btn-warning btn-sm" onclick="changeSideBarPosition('sidebar','bottom')">
+            <i class="fa fa-angle-double-down fa-1x" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Accordion -->
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+            aria-controls="collapseOne">
+            Collapsible Group Item #1
+          </button>
+          <a href="#" class="btn btn-warning btn-sm" onclick="changePosition('accordion','top')">
+            <i class="fa fa-angle-double-up fa-1x" aria-hidden="true"></i>
+          </a>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+          haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+            aria-controls="collapseTwo">
+            Collapsible Group Item #2
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+          haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+            aria-expanded="false" aria-controls="collapseThree">
+            Collapsible Group Item #3
+          </button>
+          <a href="#" class="btn btn-warning btn-sm" onclick="changePosition('accordion','bottom')">
+            <i class="fa fa-angle-double-down fa-1x" aria-hidden="true"></i>
+          </a>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+          haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
